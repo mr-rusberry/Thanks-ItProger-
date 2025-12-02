@@ -1,0 +1,32 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+    <aside>
+        <img style="width: 100px; height: auto;" src="{% static 'main/img/image.png' %}" alt="logo">
+        <span class="logo">Rusberry</span>
+        <h3>Navigation</h3>
+        <ul>
+            <a href="{% url 'main' %}"><li><i class="bi bi-house"></i>main</li></a>
+            <a href="{% url 'about' %}"><li><i class="bi bi-file-earmark-person"></i>about</li></a>
+            <a href="{% url 'contacts' %}"><li><i class="bi bi-telephone"></i>contacts</li></a>
+            <a href="{% url 'news' %}"><li><i class="bi bi-newspaper"></i>news</li></a>
+            <a href="{% url 'add_news' %}"><li><button class="btn btn-info"><i class="bi bi-plus-lg"></i> Add news</button></li></a>
+        </ul>
+    </aside>
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    background-color: rgb(48, 48, 48);
+}
+
+aside{
+    float: left;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+    margin: 0;
+}
+
+aside img{
+    width: 80px;
+    float: left;
+
+}
+
+aside .logo{
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+
+}
+
+aside h3{
+    margin-top: 50px;
+    font-size: 28px;
+
+}
+
+aside ul {list-style: none;}
+aside ul li{
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: transform .6s ease;
+    text-underline-position: unset;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.04);
+    
+}
+
+form {
+    align-content: center;
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+div h1{
+    text-align: center;
+    color: white;
+}
