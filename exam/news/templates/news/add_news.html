@@ -3,7 +3,6 @@
 {% block title %}news - add{% endblock %}
 
 {% block body %}
-
     <div class="features">
         <h1 class="div-h1">Add news</h1>
         <form method="post">
@@ -13,8 +12,10 @@
             {{ form.article }}<br>
             {{ form.date }}<br>
             <span>{{ error }}</span><br>
-            <button type="submit" class="btn btn-success">+ add</button>
+            <button type="submit" class="btn btn-success">add</button>
+
         </form>
+
     </div>
 
 {% endblock %}

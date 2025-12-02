@@ -3,25 +3,22 @@
 {% block title %}news - main{% endblock %}
 
 {% block body %}
+    {% for item in news %}
+        <div class="card text-center" >
+            <div class="card-header">
+                {{ item.title }}
+            </div>
 
-{% for item in news %}
-    <div class="card text-center" >
-        <div class="card-header">
-            {{ item.title }}
+            <div class="card-body">
+                <h5 class="card-title">{{ item.anons }}</h5>
+                <p class="card-text">{{ item.article }}</p>
+            </div>
+
+            <div class="card-footer text-body-secondary">
+                {{ item.date }}
+            </div>
+            
         </div>
-
-        <div class="card-body">
-            <h5 class="card-title">{{ item.anons }}</h5>
-            <p class="card-text">{{ item.article }}</p>
-        </div>
-
-        <div class="card-footer text-body-secondary">
-            {{ item.date }}
-        </div>
-    </div>
-{% endfor %}
-
-
-
+    {% endfor %}
 
 {% endblock %}
