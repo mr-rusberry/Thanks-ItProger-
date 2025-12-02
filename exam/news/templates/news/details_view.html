@@ -7,5 +7,7 @@
         <h1>{{ articles.anons }}</h1><br>
         <p>{{ articles.article }}</p><br>
         <p>{{ articles.date }}</p>
+        <a href="{% url 'news-delete' articles.id %}" class="btn btn-danger">Delete</a>
+        <a href="{% url 'news-update' articles.id %}" class="btn btn-warning">Update</a>
     </div>
 {% endblock %}
